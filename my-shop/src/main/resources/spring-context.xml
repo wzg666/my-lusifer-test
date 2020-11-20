@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--此处加载了springContext，其它类的初始化依赖了这个，需要在最上面初始化，否则可能会导致其它bean初始化不成功-->
+    <bean id="springUtils" class="com.wzg.test.my.shop.common.util.SpringUtils"></bean>
+
+    <!--dao-->
+    <bean id="userDao" class="com.wzg.test.my.shop.dao.impl.UserDaoImpl"></bean>
+
+    <!--service-->
+    <bean id="userService" class="com.wzg.test.my.shop.service.impl.UserServiceImpl"></bean>
+</beans>
